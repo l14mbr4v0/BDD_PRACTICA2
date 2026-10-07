@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoShield | Sistema de Gestión de Seguros y Accidentes</title>
+  <!-- CDN de Tailwind CSS para estilos modernos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navegación -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="p-2 bg-indigo-600 rounded-lg shadow-lg shadow-indigo-500/30">
+          <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white">AutoShield <span class="text-xs text-indigo-400 font-mono px-2 py-0.5 bg-indigo-950 border border-indigo-800 rounded">v1.0 (Demo)</span></span>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+        <a href="#caracteristicas" class="hover:text-indigo-400 transition-colors">Características</a>
+        <a href="#modulos" class="hover:text-indigo-400 transition-colors">Módulos</a>
+        <a href="#reportes" class="hover:text-indigo-400 transition-colors">Reportes</a>
+        <a href="#equipo" class="hover:text-indigo-400 transition-colors">Equipo</a>
+      </nav>
+      <div>
+        <a href="#demo" class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-md transition-all">Acceder al Portal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-300 bg-indigo-900/50 rounded-full border border-indigo-700/50 mb-6">
+          <i data-lucide="database" class="w-3.5 h-3.5"></i> Gestión Integrada de Pólizas y Siniestros
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          Control total sobre tus <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Pólizas y Reclamaciones</span>
+        </h1>
+        <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+          Plataforma centralizada para la administración de clientes, registro de vehículos, gestión de coberturas y seguimiento de accidentes en tiempo real.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#modulos" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all">
+            Explorar Módulos <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+          <a href="#arquitectura" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all">
+            Ver Arquitectura E-R
+          </a>
+        </div>
+      </div>
+
+      <!-- Preview Interfaz Simulación -->
+      <div id="demo" class="mt-16 rounded-2xl border border-slate-800 bg-slate-950/60 p-4 shadow-2xl backdrop-blur-xl">
+        <div class="flex items-center space-x-2 pb-3 mb-4 border-b border-slate-800">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-xs text-slate-500 font-mono ml-2">dashboard.autoshield.internal/overview</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <p class="text-xs font-medium text-slate-400">Pólizas Vigentes</p>
+            <p class="text-2xl font-bold text-white mt-1">1,248</p>
+            <span class="text-xs text-emerald-400 flex items-center mt-2"><i data-lucide="trending-up" class="w-3 h-3 mr-1"></i> +12% este mes</span>
+          </div>
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <p class="text-xs font-medium text-slate-400">Vehículos Registrados</p>
+            <p class="text-2xl font-bold text-white mt-1">1,890</p>
+            <span class="text-xs text-indigo-400 flex items-center mt-2"><i data-lucide="car" class="w-3 h-3 mr-1"></i> Activos</span>
+          </div>
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <p class="text-xs font-medium text-slate-400">Accidentes Reportados</p>
+            <p class="text-2xl font-bold text-white mt-1">42</p>
+            <span class="text-xs text-amber-400 flex items-center mt-2"><i data-lucide="alert-triangle" class="w-3 h-3 mr-1"></i> 8 en revisión</span>
+          </div>
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <p class="text-xs font-medium text-slate-400">Reclamaciones Pendientes</p>
+            <p class="text-2xl font-bold text-white mt-1">15</p>
+            <span class="text-xs text-rose-400 flex items-center mt-2"><i data-lucide="clock" class="w-3 h-3 mr-1"></i> Reclamos abiertos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Módulos / Entidades Principales -->
+  <section id="modulos" class="py-20 bg-slate-950/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white">Gestión Integral del Dominio</h2>
+        <p class="text-slate-400 mt-2">Módulos diseñados para reflejar la estructura relacional de la aseguradora.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Clientes & Vehículos -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 bg-indigo-900/40 border border-indigo-700/50 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Clientes y Vehículos</h3>
+          <p class="text-slate-400 text-sm mb-4">Registro completo de propietarios, datos de contacto, marcas, modelos y números de placa asociados.</p>
+          <ul class="text-xs text-slate-500 space-y-2 font-mono">
+            <li>• ENTIDAD: CLIENTE (ID, Nombre, Teléfono, Correo)</li>
+            <li>• ENTIDAD: VEHICULO (ID, Placas, Marca, Modelo, Año)</li>
+          </ul>
+        </div>
+
+        <!-- Pólizas & Coberturas -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 bg-cyan-900/40 border border-cyan-700/50 text-cyan-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Pólizas y Coberturas</h3>
+          <p class="text-slate-400 text-sm mb-4">Administración de primas, vigencias, tipos de seguros y vinculación M:N con tipos de cobertura.</p>
+          <ul class="text-xs text-slate-500 space-y-2 font-mono">
+            <li>• ENTIDAD: POLIZA (Nº Póliza, Prima, Vigencia)</li>
+            <li>• ENTIDAD: COBERTURA (Daños, Robo, R. Civil)</li>
+          </ul>
+        </div>
+
+        <!-- Siniestros & Reclamaciones -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition-all">
+          <div class="w-12 h-12 bg-amber-900/40 border border-amber-700/50 text-amber-400 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="alert-circle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Accidentes y Reclamaciones</h3>
+          <p class="text-slate-400 text-sm mb-4">Control de incidentes viales, lugar, fecha, descripción de daños e historial de montos reclamados.</p>
+          <ul class="text-xs text-slate-500 space-y-2 font-mono">
+            <li>• ENTIDAD: ACCIDENTE (Fecha, Hora, Lugar, Daños)</li>
+            <li>• ENTIDAD: RECLAMACION (Monto, Estado, Obs.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página / Créditos académicos -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+        <p class="text-sm font-semibold text-white">Instituto Politécnico Nacional - ESCOM</p>
+        <p class="text-xs text-slate-500 mt-1">Unidad de Aprendizaje: Bases de Datos | Grupo 3CV2</p>
+        <p class="text-xs text-slate-500">Profesor: Gabriel Hurtado Avilés</p>
+      </div>
+      <div class="text-center md:text-right text-xs text-slate-400 space-y-1">
+        <p class="font-medium text-slate-300">Desarrollado por el equipo:</p>
+        <p>Avalos Hernandez Joshua Jasiel</p>
+        <p>Bravo Mina Liam Valapai</p>
+        <p>Antonio Navarro Domínguez</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Inicializar iconos SVG
+    lucide.createIcons();
+  </script>
+</body>
+</html>
